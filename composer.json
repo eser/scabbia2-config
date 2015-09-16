@@ -1,0 +1,55 @@
+{
+    "name": "scabbiafw/scabbia2-config",
+    "description": "Scabbia2 Config Component",
+    "type": "library",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
+    },
+    "keywords": [
+        "larukedi",
+        "scabbia",
+        "scabbia2",
+        "scabbiafw",
+        "config"
+    ],
+    "homepage": "http://www.scabbiafw.com/",
+    "license": [
+        "Apache-2.0"
+    ],
+    "authors": [
+        {
+            "name": "Scabbia Framework Organization",
+            "homepage": "http://scabbiafw.com/"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/scabbiafw/scabbia2-config/blob/master/contributors.md"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/scabbiafw/scabbia2-config/issues",
+        "source": "https://github.com/scabbiafw/scabbia2-config"
+    },
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "scabbiafw/scabbia2-tasks": "*",
+        "scabbiafw/scabbia2-testing": "*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Scabbia\\Config\\": [ "src/Config/" ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Scabbia\\Tests\\Config\\": [ "tests/Config/" ]
+        }
+    }
+}
