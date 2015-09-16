@@ -41,14 +41,27 @@ class ConfigCollection
     /**
      * Adds a piece into configuration compilation
      *
-     * @param string $uConfig configuration
-     * @param int    $uFlags  loading flags
+     * @param string $uConfig        configuration
+     * @param int    $uLoadingFlags  loading flags
      *
      * @return void
      */
-    public function add($uConfig, $uFlags = self::NONE)
+    public function add($uConfig, $uLoadingFlags = self::NONE)
     {
-        $this->process($this->content, $uConfig, $uFlags);
+        $this->process($this->content, $uConfig, $uLoadingFlags);
+    }
+
+    /**
+     * Sets a configuration flag
+     *
+     * @param string $uName   name of the configuration flag
+     * @param bool   $uValue  value
+     *
+     * @return void
+     */
+    public function setFlag($uName, $uValue)
+    {
+        $this->configFlags[$uName] = $uValue;
     }
 
     /**
@@ -64,16 +77,16 @@ class ConfigCollection
     /**
      * Processes the configuration file in order to simplify its accessibility
      *
-     * @param mixed $uTarget  target reference
-     * @param mixed $uNode    source object
-     * @param int   $uFlags   loading flags
+     * @param mixed $uTarget        target reference
+     * @param mixed $uNode          source object
+     * @param int   $uLoadingFlags  loading flags
      *
      * @return void
      */
-    protected function process(&$uTarget, $uNode, $uFlags)
+    protected function process(&$uTarget, $uNode, $uLoadingFlags)
     {
         $tQueue = [
-            [[], $uNode, $uFlags, &$uTarget, null, false]
+            [[], $uNode, $uLoadingFlags, &$uTarget, null, false]
         ];
 
         do {
