@@ -6,10 +6,11 @@
 [![Total Downloads](https://poser.pugx.org/scabbiafw/scabbia2-config/downloads.png)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 [![Latest Stable Version](https://poser.pugx.org/scabbiafw/scabbia2-config/v/stable)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 [![Latest Unstable Version](https://poser.pugx.org/scabbiafw/scabbia2-config/v/unstable)](https://packagist.org/packages/scabbiafw/scabbia2-config)
+[![Documentation Status](https://readthedocs.org/projects/scabbia2-documentation/badge/?version=latest)](http://docs.scabbiafw.com/)
 [![License](https://poser.pugx.org/scabbiafw/scabbia2-config/license.png)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 
 ## Links
-- [Documentation](http://scabbiafw.com/docs/)
+- [Documentation](http://docs.scabbiafw.com/)
 - [Twitter](https://twitter.com/scabbiafw)
 - [Contributor List](contributors.md)
 - [License Information](LICENSE)
