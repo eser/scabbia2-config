@@ -3,11 +3,11 @@
 [This component](https://github.com/scabbiafw/scabbia2-config/) is a configuration compiler which supports binding multiple configuration files.
 
 [![Build Status](https://travis-ci.org/scabbiafw/scabbia2-config.png?branch=master)](https://travis-ci.org/scabbiafw/scabbia2-config)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/scabbiafw/scabbia2-config/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/scabbiafw/scabbia2-config/?branch=master)
 [![Total Downloads](https://poser.pugx.org/scabbiafw/scabbia2-config/downloads.png)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 [![Latest Stable Version](https://poser.pugx.org/scabbiafw/scabbia2-config/v/stable)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 [![Latest Unstable Version](https://poser.pugx.org/scabbiafw/scabbia2-config/v/unstable)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 [![Documentation Status](https://readthedocs.org/projects/scabbia2-documentation/badge/?version=latest)](http://docs.scabbiafw.com/)
-[![License](https://poser.pugx.org/scabbiafw/scabbia2-config/license.png)](https://packagist.org/packages/scabbiafw/scabbia2-config)
 
 ## Links
 - [Documentation](http://docs.scabbiafw.com/)
