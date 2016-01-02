@@ -11,23 +11,97 @@
 
 ## Usage
 
+### Merging multiple configurations
+
 ```php
 use Scabbia\Config\ConfigCollection;
 
-$config = new ConfigCollection();
+$confs = new ConfigCollection();
 
 // add a yaml-parsed configuration
 $yaml = new \Scabbia\Yaml\Parser();
-$config->add($yaml->parse(file_get_contents('common.yml')));
+$confs->add($yaml->parse(file_get_contents('common.yml')));
 
 // ...and/or add a json file
-$config->add(json_decode(file_get_contents('production.json')));
+$confs->add(json_decode(file_get_contents('production.json')));
 
-// ...override a value with 'important' flag
-$config->add(['env|important' => 'development']);
+// ...and/or add a configuration value manually
+$confs->add([
+    'env' => 'development'
+]);
 
 // output the result
-print_r($config->save());
+$config = $confs->save();
+print_r($config);
+```
+
+### Overriding an existing configuration item
+
+```php
+use Scabbia\Config\ConfigCollection;
+
+$confs = new ConfigCollection();
+
+$confs->add([
+    'env' => 'production'
+]);
+
+// in second config you can override a value with 'important' flag
+$confs->add([
+    'env|important' => 'development'
+]);
+
+// output the result
+$config = $confs->save();
+echo $config['env'];
+```
+
+### Constructing a list in separate configurations
+
+```php
+use Scabbia\Config\ConfigCollection;
+
+$confs = new ConfigCollection();
+
+$confs->add([
+    'items|list' => [
+        'first',
+        'second'
+    ]
+]);
+
+// in second config you can override a value with 'important' flag
+$confs->add([
+    'items|list' => [
+        'third'
+    ]
+]);
+
+// output the result
+$config = $confs->save();
+print_r($config['items']);
+```
+
+### Flatten configuration value keys
+
+```php
+use Scabbia\Config\ConfigCollection;
+
+$confs = new ConfigCollection();
+
+$confs->add([
+    'database|flat' => [
+        'mongo' => [
+            'username' => 'scabbia2',
+            'password' => 'testing'
+        ]
+    ]
+]);
+
+// output the result
+$config = $confs->save();
+echo $config['database/mongo/username'];
+echo $config['database/mongo/password'];
 ```
 
 ## Links
