@@ -9,6 +9,25 @@
 [![Latest Unstable Version](https://poser.pugx.org/eserozvataf/scabbia2-config/v/unstable)](https://packagist.org/packages/eserozvataf/scabbia2-config)
 [![Documentation Status](https://readthedocs.org/projects/scabbia2-documentation/badge/?version=latest)](https://readthedocs.org/projects/scabbia2-documentation)
 
+## Usage
+
+```php
+$config = new ConfigCollection();
+
+// add a yaml-parsed configuration
+$yaml = new \Scabbia\Yaml\Parser();
+$config->add($yaml->parse(file_get_contents('common.yml')));
+
+// ...and/or add a json file
+$config->add(json_decode(file_get_contents('production.json')));
+
+// ...override a value with 'important' flag
+$config->add(['env|important' => 'development']);
+
+// output the result
+print_r($config->save());
+```
+
 ## Links
 - [List of All Scabbia2 Components](https://github.com/eserozvataf/scabbia2)
 - [Documentation](https://readthedocs.org/projects/scabbia2-documentation)
