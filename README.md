@@ -12,6 +12,8 @@
 ## Usage
 
 ```php
+use Scabbia\Config\ConfigCollection;
+
 $config = new ConfigCollection();
 
 // add a yaml-parsed configuration
